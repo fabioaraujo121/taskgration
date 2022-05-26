@@ -1,0 +1,9 @@
+class <%= name.capitalize %>
+  def up
+    # Write here everything you want to change
+  end
+
+  def down
+    # Write here the things to revert what you did
+  end
+end
