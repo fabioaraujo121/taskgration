@@ -28,6 +28,11 @@ $ gem install taskgration
 $ rails generate taskgration:create YOUR_TASK_MIGRATION_NAME
 ```
 
+### 2. Running the unapplied tasks migrations
+```bash
+$ rails taskgration:up
+```
+
 ## Contributing
 Contribution directions go here.
 
