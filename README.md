@@ -21,6 +21,9 @@ Or install it yourself as:
 $ gem install taskgration
 ```
 
+```bash
+$ rake taskgration:install:migrations
+```
 ## Usage
 
 ### 1. Creating a task to migrate
@@ -30,7 +33,7 @@ $ rails generate taskgration:create YOUR_TASK_MIGRATION_NAME
 
 ### 2. Running the unapplied tasks migrations
 ```bash
-$ rails taskgration:up
+$ rake taskgration:up
 ```
 
 ## Contributing

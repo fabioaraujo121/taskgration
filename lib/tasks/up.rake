@@ -5,7 +5,7 @@ namespace :taskgration do
   desc 'Run this task if you want to apply the latest tasks migrations'
   task up: :environment do
     started_at = Time.now
-    current_version = 0#Taskgration::TaskMigration.current_version
+    current_version = Taskgration::TaskMigration.current_version
 
     ##
     # 1. Getting files newer than current version in DB
@@ -38,6 +38,9 @@ namespace :taskgration do
 
     print "Tasks migrated in #{Time.at(Time.now - started_at).utc.strftime('%H hours %M minutes and %S seconds')}.\n"
     print "Current version is: #{current_version}\n\n"
+
+    abort("NOTHING NEW TO RUN...") if files_to_run.empty?
+
     print "FILES MIGRATED:\n"
     print files_to_run.map{ |name| "    #{name}" }.join("\n")
   end
