@@ -1,4 +1,4 @@
-class <%= name.capitalize %>
+class <%= name.camelcase %>
   def up
     # Write here everything you want to change
   end
