@@ -40,11 +40,8 @@ $ rake taskgration:up
 ```bash
 $ rake taskgration:down TASKGRATION_VERSION=YOUR_VERSION_NUMBER #=> Rollback 1 specific version
 $ rake taskgration:down TASKGRATION_STEPS=QUANTITY_OF_STEPS #=> Rollback the number of times passed
-$ rake taskgration:down #=> Rollback the newest applied migration
+$ rake taskgration:down #=> Rollback always the newest created migration
 ```
-rake taskgration:down TASKGRATION_VERSION=20220710121710
-## Contributing
-Contribution directions go here.
 
 ## License
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
