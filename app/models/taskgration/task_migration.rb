@@ -3,13 +3,13 @@ module Taskgration
 
     ##
     # Scopes
-    scope :newest, -> { order(created_at: :desc) }
+    scope :newest, -> { order(version: :desc) }
 
     ##
     # Class Methods
     class << self
       def current_version
-        newest.first.version
+        newest.first&.version
       end
     end
   end

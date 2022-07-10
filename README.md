@@ -8,7 +8,7 @@ How to use my plugin.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem "taskgration"
+gem 'taskgration'
 ```
 
 And then execute:
@@ -36,6 +36,13 @@ $ rails generate taskgration:create YOUR_TASK_MIGRATION_NAME
 $ rake taskgration:up
 ```
 
+### 3. Rolling back applied tasks migrations
+```bash
+$ rake taskgration:down TASKGRATION_VERSION=YOUR_VERSION_NUMBER #=> Rollback 1 specific version
+$ rake taskgration:down TASKGRATION_STEPS=QUANTITY_OF_STEPS #=> Rollback the number of times passed
+$ rake taskgration:down #=> Rollback the newest applied migration
+```
+rake taskgration:down TASKGRATION_VERSION=20220710121710
 ## Contributing
 Contribution directions go here.
 
