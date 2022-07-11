@@ -18,12 +18,9 @@ $ bundle
 
 Or install it yourself as:
 ```bash
-$ gem install taskgration
-```
-
-```bash
 $ rake taskgration:install:migrations
 ```
+
 ## Usage
 
 ### 1. Creating a task to migrate
